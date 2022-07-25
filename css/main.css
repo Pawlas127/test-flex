@@ -1,3 +1,15 @@
+.wrapper {
+  margin: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.white-block {
+  position: absolute;
+  height: 40px;
+  width: 60%;
+}
+
 *,
 *::before,
 *::after {
@@ -37,12 +49,12 @@ body {
 .burger-btn:hover .burger-btn_bars::before {
   width: 100%;
 }
-.burger-btn_box {
+.burger-btn__box {
   position: relative;
   width: 40px;
   height: 30px;
 }
-.burger-btn_bars, .burger-btn_bars::after, .burger-btn_bars::before {
+.burger-btn__bars, .burger-btn__bars::after, .burger-btn__bars::before {
   position: absolute;
   right: 0;
   height: 3px;
@@ -51,14 +63,14 @@ body {
   -webkit-transition: width 0.3s;
   transition: width 0.3s;
 }
-.burger-btn_bars {
+.burger-btn__bars {
   width: 100%;
 }
-.burger-btn_bars::after {
+.burger-btn__bars::after {
   top: 13px;
   width: 60%;
 }
-.burger-btn_bars::before {
+.burger-btn__bars::before {
   top: 27px;
   width: 30%;
   -webkit-transition-delay: 0.1s;

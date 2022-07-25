@@ -41,17 +41,17 @@ body {
 		}
 	}
 
-	&_box {
+	&__box {
 		position: relative;
 		width: 40px;
 		height: 30px;
 	}
-	&_bars,
-	&_bars::after,
-	&_bars::before {
+	&__bars,
+	&__bars::after,
+	&__bars::before {
 		@include burgerBtn;
 	}
-	&_bars {
+	&__bars {
 		width: 100%;
 
 		&::after {
