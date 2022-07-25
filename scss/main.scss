@@ -1,5 +1,5 @@
 @import "./utilities/components";
-@import "./utilities/;colors";
+@import "./utilities/colors";
 @import "./utilities/mixins";
 
 *,
@@ -11,14 +11,57 @@
 }
 html {
 	font-size: 62.5%;
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
 	font-family: "Open Sans", sans-serif;
 	font-family: "Dancing Script", cursive;
-	background-color: #333;
+	font-size: 1.6rem;
+}
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 1em;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 1000;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+
+	&:hover {
+		.burger-btn_bars::after,
+		.burger-btn_bars::before {
+			width: 100%;
+		}
+	}
+
+	&_box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+	&_bars,
+	&_bars::after,
+	&_bars::before {
+		@include burgerBtn;
+	}
+	&_bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+		}
+		&::before {
+			top: 27px;
+			width: 30%;
+			transition-delay: 0.1s;
+		}
+	}
 }
