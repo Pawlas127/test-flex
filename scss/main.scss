@@ -126,6 +126,12 @@ body {
 	animation: navItemsAnimation 1s both;
 }
 
+.black-bars-color,
+.black-bars-color::after,
+.black-bars-color::before {
+	background-color: $dark;
+}
+
 // HEADER
 
 .header {
@@ -650,11 +656,11 @@ body {
 			display: block;
 		}
 
-		&__box{
+		&__box {
 			margin: 0 2em;
 			width: 25%;
 
-			&:first-child{
+			&:first-child {
 				width: 50%;
 			}
 		}
@@ -663,11 +669,11 @@ body {
 			font-size: 2.4rem;
 		}
 
-		&__box-list{
+		&__box-list {
 			list-style: none;
 		}
 
-		&__box-item{
+		&__box-item {
 			margin-bottom: 1em;
 
 			a {
